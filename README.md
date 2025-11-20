@@ -34,9 +34,7 @@ It runs in **real mode** and uses **DOS interrupts** for input and output operat
 ---
 
 ### 5. Feedback and Error Handling
-- **Success Message:** Displayed when the password is correct.  
-- **Failure Message:** Displayed for incorrect passwords.  
+- **Success Message:** Displayed if the password is correct.  
+- **Failure Message:** Displayed if incorrect passwords.  
 - **Lockout Message:** Displayed after 3 failed attempts.  
 - **Invalid Input Handling:** Gracefully handles non-printable characters and invalid menu selections.  
-
----
