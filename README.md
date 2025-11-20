@@ -3,9 +3,7 @@
 ## System Design Specification
 
 ### 1. Program Overview
-The Password Validation System is a simple program written in **x86 assembly language**.  
 It runs in **real mode** and uses **DOS interrupts** for input and output operations.  
-This project demonstrates low-level input handling, validation logic, and feedback mechanisms.
 
 ---
 
@@ -42,9 +40,3 @@ This project demonstrates low-level input handling, validation logic, and feedba
 - **Invalid Input Handling:** Gracefully handles non-printable characters and invalid menu selections.  
 
 ---
-
-### 6. Program Flow
-1. **Main Menu:** Display options and read user choice.  
-2. **Password Prompt:** Prompt the user to enter the password.  
-3. **Input Reading:** Handle character input, including backspace and validation.  
-4. **Password Checking:** Compare entered password wit
