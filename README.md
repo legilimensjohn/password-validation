@@ -1,37 +1,50 @@
-System Design Specification
+# Password Validation System in x86 Assembly
 
-Program Overview:
-The program is a simple password validation system written in x86 assembly language.
-It runs in real mode and uses DOS interrupts for input and output operations.
+## System Design Specification
 
-User Interface:
-Welcome Message: A message welcoming the user to the password validation system.
-Menu: Options for the user to attempt password validation or exit the program.
+### 1. Program Overview
+The Password Validation System is a simple program written in **x86 assembly language**.  
+It runs in **real mode** and uses **DOS interrupts** for input and output operations.  
+This project demonstrates low-level input handling, validation logic, and feedback mechanisms.
 
-Password Handling:
-Predefined Password: The password to be validated against is hardcoded as 'password'.
-Password Length: The password length is fixed at 8 characters.
-Input and Validation:
-User is prompted to enter an 8-character password.
-Input characters are read without echoing them to the screen.
-The user can use the backspace key to correct their input.
-Non-printable characters are rejected.
- 
-Validation Logic:
-The entered password is compared character-by-character with the predefined password
-After each failed attempt, the program displays the number of correct characters.
-The user is allowed up to 3 attempts to enter the correct password.
+---
 
-Feedback and Error Handling:
-Success Message: Displayed if the password is correct.
-Failure Message: Displayed if the password is incorrect.
-Lockout Message: Displayed if the user fails to enter the correct password within 3 attempts.
-Invalid Input Handling: Non-printable characters and invalid menu selections are handled gracefully.
+### 2. User Interface
+- **Welcome Message:** Greets the user and introduces the program.  
+- **Main Menu:** Provides two options:  
+  1. Attempt Password Validation  
+  2. Exit Program  
 
-Program Flow:
-Main Menu: Displays options and reads user choice.
-Password Prompt: Prompts the user to enter the password.
-Input Reading: Handles character input, including backspace.
-Password Checking: Compares entered password with the predefined one.
-Feedback: Provides feedback on the number of correct characters and overall result.
-Attempts Management: Tracks the number of attempts and locks out the user after 3 failed attempts.
+---
+
+### 3. Password Handling
+- **Predefined Password:** `password`  
+- **Password Length:** Fixed at **8 characters**  
+
+---
+
+### 4. Input and Validation
+- Users are prompted to enter an **8-character password**.  
+- Input is handled securely:  
+  - Characters are **not echoed** to the screen  
+  - **Backspace** is supported for corrections  
+  - **Non-printable characters** are rejected  
+- Validation compares input **character-by-character** with the predefined password.  
+- After each incorrect attempt, the program displays the **number of correct characters**.  
+- Users have **up to 3 attempts** to enter the correct password.  
+
+---
+
+### 5. Feedback and Error Handling
+- **Success Message:** Displayed when the password is correct.  
+- **Failure Message:** Displayed for incorrect passwords.  
+- **Lockout Message:** Displayed after 3 failed attempts.  
+- **Invalid Input Handling:** Gracefully handles non-printable characters and invalid menu selections.  
+
+---
+
+### 6. Program Flow
+1. **Main Menu:** Display options and read user choice.  
+2. **Password Prompt:** Prompt the user to enter the password.  
+3. **Input Reading:** Handle character input, including backspace and validation.  
+4. **Password Checking:** Compare entered password wit
